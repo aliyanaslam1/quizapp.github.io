@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mainP" class="main">
+        <div class="container">
+            <div class="main text-white bg-warning m-4 d-flex p-3 justify-content-between shadow">
+                <h1 class="">Quiz App</h1>
+                <div class="fs-3"><span id="currentNumber" class="">0</span>/<span id="totalNumber">6</span></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main bg-warning text-white m-4 p-5 justify-content-between shadow">
+                <h3 id="showQuestion"></h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main ">
+                <h3 id="dowQuestion"></h3>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main bg-warning text-white m-4  p-5  shadow">
+                <div id="questionbtn" class="row">
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="main d-flex justify-content-end text-white m-3  p-2">
+                <button onclick="nextQues()" class="btn btn-dark text-white  shadow p-3 px-5 rounded">Next</button>
+            </div>
+        </div>
+        
+        <div id="resultPage" style="display: none;" class="main">
+            <div class="container">
+                <div class="main text-white bg-warning m-4 d-flex p-3 justify-content-between shadow">
+                    <h1 id="dispresult">YOUR MARKS IS <span id="percentage"></span>%</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+</body>
+<script src="app.js"></script>
+
+</html>
+
+
+
+
+
+<!-- <h1>Math Quiz!</h1> -->
+<!-- <div>
+        <fieldset>
+            <p>45 + 20 =</p>
+            <input id="q1-a1" type="radio">75</input><br>
+            <input id="q1-a2" type="radio">95</input><br>
+            <input id="q1-a3" type="radio">65</input><br>
+            <input id="q1-a4" type="radio">85</input><br>
+        </fieldset>
+    </div>
+    <br><br>
+    <div>
+        <fieldset>
+            <p>30 - 10 =</p>
+            <input id="q2-a1" type="radio">30</input><br>
+            <input id="q2-a2" type="radio">40</input><br>
+            <input id="q2-a3" type="radio">20</input><br>
+            <input id="q2-a4" type="radio">10</input><br>
+        </fieldset>
+    </div>
+    <br><br>
+    <div>
+        <fieldset>
+            <p>10 x 6 =</p>
+            <input id="q3-a1" type="radio">70</input><br>
+            <input id="q3-a2" type="radio">90</input><br>
+            <input id="q3-a3" type="radio">60</input><br>
+            <input id="q3-a4" type="radio">80</input><br>
+        </fieldset>
+    </div>
+    <br><br>
+    <div>
+        <fieldset>
+            <p>10 + 1000 =</p>
+            <input id="q4-a1" type="radio">1010</input><br>
+            <input id="q4-a2" type="radio">1020</input><br>
+            <input id="q4-a3" type="radio">1030</input><br>
+            <input id="q4-a4" type="radio">1040</input><br>
+        </fieldset>
+    </div>
+    <br><br>
+    <div>
+        <fieldset>
+            <p>15 - 350 =</p>
+            <input id="q5-a1" type="radio">335</input><br>
+            <input id="q5-a2" type="radio">345</input><br>
+            <input id="q5-a3" type="radio">365</input><br>
+            <input id="q5-a4" type="radio">385</input><br>
+        </fieldset>
+    </div>
+    <br><br>
+    <div>
+        <fieldset>
+            <p>20 x 10 =</p>
+            <input id="q6-a1" type="radio">200</input><br>
+            <input id="q6-a2" type="radio">250</input><br>
+            <input id="q6-a3" type="radio">210</input><br>
+            <input id="q6-a4" type="radio">220</input><br>
+        </fieldset>
+    </div>
+    <br><br>
+    <div>
+        <fieldset>
+            <p>150 + 70 =</p>
+            <input id="q7-a1" type="radio">220</input><br>
+            <input id="q7-a2" type="radio">200</input><br>
+            <input id="q7-a3" type="radio">210</input><br>
+            <input id="q7-a4" type="radio">230</input><br>
+        </fieldset>
+    </div>
+    <br><br>
+    <div>
+        <fieldset>
+            <p>2022 - 2010 =</p>
+            <input id="q8-a1" type="radio">2012</input><br>
+            <input id="q8-a2" type="radio">2000</input><br>
+            <input id="q8-a3" type="radio">2012</input><br>
+            <input id="q8-a4" type="radio">2020</input><br>
+        </fieldset>
+    </div>
+    <br><br>
+    <div>
+        <fieldset>
+            <p>15 x 4 =</p>
+            <input id="q9-a1" type="radio">60</input><br>
+            <input id="q9-a2" type="radio">70</input><br>
+            <input id="q9-a3" type="radio">90</input><br>
+            <input id="q9-a4" type="radio">100</input><br>
+        </fieldset>
+    </div>
+    <br><br>
+    <div>
+        <fieldset>
+            <p>150 + 400 =</p>
+            <input id="q10-a1" type="radio">555</input><br>
+            <input id="q10-a2" type="radio">550</input><br>
+            <input id="q10-a3" type="radio">540</input><br>
+            <input id="q10-a4" type="radio">510</input><br>
+        </fieldset>
+    </div> -->
